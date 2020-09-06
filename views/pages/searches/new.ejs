@@ -7,12 +7,23 @@
     </head>
     <body>
         <main>
-            <form action="./new.ejs" method="post">
-                <input type="text" placeholder="enter a title or author" />
+            <form action="/searches" method="post">
+                <input
+                    type="text"
+                    placeholder="enter a title or author"
+                    name="search"
+                    required
+                />
                 <!-- option for  title -->
                 <label for="title"
                     >Title
-                    <input type="radio" name="title" id="title" value="title" />
+                    <input
+                        type="radio"
+                        name="title"
+                        id="title"
+                        value="title"
+                        required
+                    />
                 </label>
                 <!-- option for autor -->
                 <label for="author"
@@ -22,8 +33,10 @@
                         name="author"
                         id="author"
                         value="author"
+                        required
                     />
                 </label>
+                <button type="submit">submit</button>
             </form>
         </main>
     </body>
