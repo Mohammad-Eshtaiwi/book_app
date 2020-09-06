@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <form action="./new.ejs" method="post">
+                <input type="text" placeholder="enter a title or author" />
+                <!-- option for  title -->
+                <label for="title"
+                    >Title
+                    <input type="radio" name="title" id="title" value="title" />
+                </label>
+                <!-- option for autor -->
+                <label for="author"
+                    >Author
+                    <input
+                        type="radio"
+                        name="author"
+                        id="author"
+                        value="author"
+                    />
+                </label>
+            </form>
+        </main>
+    </body>
+</html>

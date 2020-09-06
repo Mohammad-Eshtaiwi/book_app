@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
     res.render("./pages/index");
 });
-app.get("/hello", (req, res) => {
-    res.render("./pages/hello");
+app.get("/searches/new", (req, res) => {
+    res.render("./pages/searches/new");
 });
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
