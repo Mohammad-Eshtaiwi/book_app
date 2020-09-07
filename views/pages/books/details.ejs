@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <%- include('../layouts/head') %>
+    </head>
+    <body>
+        <%- include('../layouts/header') %>
+        <main>
+            <section class="books">
+                <article class="book text-center spacing">
+                    <img
+                        src=" <%= book.image_url %> "
+                        alt=" <%= book.title %> "
+                    />
+                    <h2><%= book.title %></h2>
+                    <h3><%= book.author %></h3>
+                    <h3><%= book.isbn %></h3>
+                    <h3><%= book.description %></h3>
+                </article>
+            </section>
+        </main>
+    </body>
+    <%- include('../layouts/scripts') %>
+</html>
