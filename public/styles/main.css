@@ -1,7 +1,7 @@
 @import "./reset.css";
 @import "./utilities.css";
 
-body{
+body {
     background-color: #9b9b9b;
 }
 
@@ -45,46 +45,49 @@ main .title {
 main .title h3 {
     margin: 0;
 }
-main .books .book{
+main .books .book {
     background-color: #d8d8d8;
     width: 60%;
     margin: 40px auto;
     padding: 30px 20px 60px;
 }
-main .books .book img{
+main .books .book img {
     width: 200px;
     height: 300px;
 }
+@media (max-width: 400px) {
+    main .books .book img {
+        width: 100%;
+    }
+}
 /* form */
-main form#search-books{
+main form#search-books {
     display: grid;
     width: 80%;
     margin: 40px auto;
     grid-template-columns: 100%;
-/* grid-template-rows: 12px 12px 12px; */
 }
-main form#search-books input[type=text]::placeholder,
+main form#search-books input[type="text"]::placeholder,
 main form#search-books,
-main form#search-books button{
+main form#search-books button {
     font-weight: 500;
 }
-main form#search-books label ,
-main form#search-books input[type=text]{
+main form#search-books label,
+main form#search-books input[type="text"] {
     padding: 5px 8px;
 }
-main form#search-books label{
+main form#search-books label {
     background-color: #d8d8d8;
-    
 }
 
-main form#search-books input[type=radio]{
+main form#search-books input[type="radio"] {
     margin-left: 20px;
 }
-main form#search-books label:first-of-type input[type=radio]{
+main form#search-books label:first-of-type input[type="radio"] {
     margin-left: 40.5px;
 }
-main form#search-books button{
+main form#search-books button {
     background-color: #111;
     color: #f1f1f1;
-    padding: 8px;    
+    padding: 8px;
 }
