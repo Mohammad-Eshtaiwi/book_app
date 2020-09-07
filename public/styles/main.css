@@ -5,6 +5,15 @@ body {
     background-color: #9b9b9b;
 }
 
+.btn {
+    color: #f1f1f1;
+    background: #010101;
+    margin-top: 20px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+}
+
 /* nav */
 nav {
     background-color: #111;
@@ -36,6 +45,11 @@ nav ul li {
     padding: 5px 0;
 }
 /* main */
+main .count-book {
+    color: #f1f1f1;
+    padding: 10px 0;
+    font-size: 20px;
+}
 /* books */
 main .title {
     background-color: #4a4a4a;

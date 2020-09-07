@@ -17,7 +17,9 @@
             <section class="title text-center">
                 <h3>Saved Books</h3>
             </section>
-            <p>Saved Books <%= books.length %></p>
+            <p class="count-book text-center">
+                Saved Books <%= books.length %>
+            </p>
             <section class="books">
                 <% books.forEach(book => { %>
 
@@ -28,10 +30,12 @@
                     />
                     <h2><%= book.title %></h2>
                     <h3><%= book.author %></h3>
-                    <a href="/books/<%= book.id %>">show seleted book</a>
+                    <a class="btn" href="/books/<%= book.id %>"
+                        >show seleted book
+                    </a>
                 </article>
 
-                <% }) %> <%= %>
+                <% }) %>
             </section>
         </main>
     </body>

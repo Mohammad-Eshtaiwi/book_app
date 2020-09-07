@@ -67,6 +67,7 @@ app.get("/books/:id", (req, res) => {
     const value = [req.params.id];
     const SQL = `SELECT * FROM books WHERE id = $1`;
     client.query(SQL, value).then(({ rows }) => {
+        rows[0].description = fixStr(rows[0].description);
         res.render("pages/books/details", { book: rows[0] });
     });
 });
@@ -77,6 +78,16 @@ app.use("*", (req, res) => {
 app.use((error, req, res) => {
     res.render("pages/error");
 });
+
+function fixStr(str) {
+    let index = str.indexOf(`"`);
+    str = str.substring(index + 1);
+    index = str.indexOf(`"`);
+    str = str.substring(0, index).trim();
+    console.log(str);
+    return str;
+}
+
 client.connect().then(() => {
     app.listen(PORT, () => console.log(`listening on ${PORT}`));
 });
