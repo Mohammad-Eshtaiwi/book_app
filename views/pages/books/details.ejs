@@ -9,6 +9,7 @@
     <body>
         <%- include('../layouts/header') %>
         <main>
+            <% console.log("hiiiiiiii",book.description) %>
             <section class="books">
                 <article class="book text-center spacing">
                     <img
@@ -19,7 +20,44 @@
                     <h3><%= book.author %></h3>
                     <h3><%= book.isbn %></h3>
                     <h3><%= book.description %></h3>
+                    <section class="delete-update d-flex justify-between">
+                        <form
+                            action="/deleteBook/<%= book.id %>?_method=delete"
+                            method="post"
+                        >
+                            <button type="submit" class="btn">delete</button>
+                        </form>
+
+                        <button class="btn update">update</button>
+                    </section>
                 </article>
+                <form
+                    action="/updateBook/<%= book.id %>?_method=put"
+                    method="post"
+                    class="d-none update-book"
+                >
+                    <input type="text" value="<%= book.title %>" name="title" />
+                    <input
+                        type="text"
+                        value="<%= book.author %>"
+                        name="author"
+                    />
+                    <input
+                        type="text"
+                        value="<%= book.image_url %>"
+                        name="image_url"
+                    />
+                    <input type="text" value="<%= book.isbn %>" name="ibsn" />
+                    <textarea
+                        name="description"
+                        cols="30"
+                        rows="10"
+                        name="description"
+                    >
+                        <%= book.description %>
+                    </textarea>
+                    <button type="submit">update</button>
+                </form>
             </section>
         </main>
     </body>
